@@ -20,8 +20,8 @@ import IconWarning from './icons/IconWarning.vue'
   line-height: 4vh;
   width: 90vw;
   border-radius: 3vh;
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   padding-top: 0.5vh;
   padding-bottom: 1vh;
   background: var(--color-back-panel);

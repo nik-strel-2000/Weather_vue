@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import NavigationMenu from './components/NavigationMenu.vue'
 import MainInfoPanel from './components/MainInfoPanel.vue'
-import WarninPanel from './components/WarninPanel.vue'
+import WarningPanel from './components/WarningPanel.vue'
 import WeatherBack from './components/WeatherBack.vue'
 import DaysForecast from './components/DaysForecast.vue'
 import TempForecast from './components/TempForecast.vue'
+import UVPanel from "@/components/UVPanel.vue";
 </script>
 
 <template>
@@ -14,9 +15,14 @@ import TempForecast from './components/TempForecast.vue'
   </header>
   <main>
     <MainInfoPanel />
-    <WarninPanel />
+    <WarningPanel />
     <DaysForecast />
-    <TempForecast />
+    <div class="panel_grid">
+      <UVPanel/>
+      <UVPanel/>
+    </div>
+
+<!--    <TempForecast />-->
   </main>
 </template>
 
@@ -62,5 +68,10 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
+}
+.panel_grid{
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
 }
 </style>
