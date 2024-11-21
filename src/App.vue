@@ -6,11 +6,15 @@ import WeatherBack from './components/WeatherBack.vue'
 import DaysForecast from './components/DaysForecast.vue'
 import TempForecast from './components/TempForecast.vue'
 import UVPanel from "@/components/UVPanel.vue";
+import HumidityPanel from "@/components/HumidityPanel.vue";
+import {verify} from "node:crypto";
 </script>
 
 <template>
   <WeatherBack />
   <header>
+    <v-icon icon="mdi-account-circle-outline" start></v-icon>
+    <!--Add trigger download for Heading-->
     <NavigationMenu />
   </header>
   <main>
@@ -19,10 +23,10 @@ import UVPanel from "@/components/UVPanel.vue";
     <DaysForecast />
     <div class="panel_grid">
       <UVPanel/>
-      <UVPanel/>
+      <HumidityPanel/>
     </div>
 
-<!--    <TempForecast />-->
+    <TempForecast />
   </main>
 </template>
 
@@ -32,15 +36,22 @@ import UVPanel from "@/components/UVPanel.vue";
 }
 
 main {
-  height: 90vh;
+  overflow: auto;
+  height: 100vh;
   margin-left: 5vw;
   margin-right: 5vw;
   width: 90%;
   color: var(--color-font-white);
 }
 
+::-webkit-scrollbar {
+  display: none !important;
+  width: none !important;
+}
 header {
-  height: 8vh;
+  right: 0;
+  position: fixed;
+  height: 5vh;
   line-height: 1.5;
   display: flex;
   align-items: center;

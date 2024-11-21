@@ -4,7 +4,7 @@ import IconSheet from './icons/IconSheet.vue'
 </script>
 <template>
   <div class="main_info_panel">
-    <h2 class="siti_text">Siti</h2>
+    <h2 class="site_text">Site</h2>
     <div class="location_block">
       <h2 class="location_text">Location Service</h2>
       <IconArrow />
@@ -23,13 +23,14 @@ import IconSheet from './icons/IconSheet.vue'
 </template>
 <style scoped>
 .main_info_panel {
+  margin-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 24vh;
 }
 
-.siti_text {
+.site_text {
   font-size: 3vh;
 }
 
