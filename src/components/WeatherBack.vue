@@ -1,13 +1,14 @@
 <script setup></script>
 <template>
-  <div class="container">
+  <div class="containerClouds">
     <img class="cloud" style="top: 50px; right: -17vh" src="../assets/Cloud.png" alt="" />
     <img class="cloud" style="top: 210px; right: 20vw" src="../assets/Cloud.png" alt="" />
   </div>
 </template>
 
 <style scoped>
-.container {
+
+.containerClouds {
   position: absolute;
   width: 100%;
   height: 100vh;

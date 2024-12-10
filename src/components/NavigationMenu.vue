@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import IconPlus from './icons/IconPlus.vue'
 import IconMenu from './icons/IconMenu.vue'
+let flagNameSite = false
 </script>
 
 <template>
   <div class="main-menu">
-    <div class="left-item">{{}}</div>
+    <div class="left-item" >
+      <span v-if="flagNameSite">Boston</span>
+    </div>
     <div class="right-item">
-      <IconPlus class="icon-size-plus" />
-      <IconMenu class="icon-size-menu" />
+      <button >
+        <IconPlus class="icon-size-plus" />
+      </button>
+      <button>
+        <IconMenu class="icon-size-menu" />
+      </button>
     </div>
   </div>
 </template>
